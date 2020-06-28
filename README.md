@@ -14,8 +14,11 @@ How to start the DropBookmarks application
 
 0. Check out project using `git clone https://github.com/javaeeeee/DropBookmarks.git`
 1. Create a key store in the project's folder using Java 8 *keytool* 
-`keytool -genkeypair -keyalg RSA -dname "CN=localhost" \
--keystore dropbookmarks.keystore  -keypass p@ssw0rd -storepass p@ssw0rd`
+
+```
+keytool -genkeypair -keyalg RSA -dname "CN=localhost" \
+-keystore dropbookmarks.keystore -keypass p@ssw0rd -storepass p@ssw0rd
+```
 2. Run `mvn clean package` to build the application
 3. To populate the database run `java -jar target/DropBookmarks-1.0-SNAPSHOT.jar db migrate -i TEST config.yml` 
 4. Start application with `java -jar target/DropBookmarks-1.0-SNAPSHOT.jar server config.yml`
